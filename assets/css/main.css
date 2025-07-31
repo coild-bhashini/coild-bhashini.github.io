@@ -18,6 +18,10 @@
   --nav-font: "Poppins",  sans-serif;
 }
 
+/*:root {
+  font-size: 18px;
+}
+*/
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
@@ -56,6 +60,7 @@
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
+  font-size: 18px;
 }
 
 /*--------------------------------------------------------------
@@ -119,6 +124,8 @@ h6 {
 }
 
 .pulsating-play-btn:after {
+
+
   content: "";
   position: absolute;
   left: 50%;
@@ -296,7 +303,7 @@ h6 {
 --background-color: #223b51;
 }
 
-/*--------------------------------------------------------------
+/*/*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Navmenu - Desktop */
@@ -325,6 +332,8 @@ h6 {
     font-family: var(--nav-font);
     font-weight: 400;
     display: flex;
+
+
     align-items: center;
     justify-content: space-between;
     white-space: nowrap;
@@ -582,6 +591,8 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+
+
   background: var(--accent-color);
   color: var(--contrast-color);
   line-height: 1;
@@ -700,6 +711,8 @@ h6 {
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
+
+
 .page-title .heading h1 {
   font-size: 38px;
   font-weight: 700;
@@ -718,6 +731,8 @@ h6 {
   font-size: 16px;
   font-weight: 600;
 }
+
+
 
 .page-title nav ol li+li {
   padding-left: 10px;
@@ -755,7 +770,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  /*padding-bottom: 60px;*/
   position: relative;
 }
 
@@ -775,6 +790,8 @@ section,
   height: 1px;
   background: color-mix(in srgb, var(--default-color), transparent 60%);
   left: 0;
+
+  
   right: 0;
   bottom: 1px;
   margin: auto;
@@ -820,7 +837,7 @@ section,
 .hero p {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin: 5px 0 30px 0;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 400;
 }
 
@@ -849,6 +866,8 @@ section,
   transition: 0.5s;
   margin-left: 25px;
   color: var(--default-color);
+
+  
   font-weight: 600;
 }
 
@@ -1265,7 +1284,7 @@ section,
 .team .team-member .member-img {
   position: relative;
   overflow: hidden;
-  height: 250px;
+  height: 260px;
 }
 
 .team .team-member .social {
@@ -1305,7 +1324,7 @@ section,
 }
 
 .team .team-member .member-info {
-  padding: 25px 15px;
+  /*padding: 25px 15px;*/
   text-align: center;
 }
 
@@ -1331,7 +1350,7 @@ section,
 }
 
 .team .team-member:hover .social {
-  opacity: 1;
+  opacity: 1;[]
 }
 
 /*--------------------------------------------------------------
@@ -1411,6 +1430,8 @@ section,
   font-weight: 500;
   font-family: var(--heading-font);
   transition: 0.3s;
+
+  
   border: 1px solid var(--accent-color);
 }
 
@@ -1469,6 +1490,8 @@ section,
   line-height: 26px;
   font-weight: 700;
 }
+
+
 
 .faq .faq-item p {
   font-size: 15px;

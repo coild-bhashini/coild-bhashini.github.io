@@ -17,6 +17,10 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -57,10 +61,10 @@
           <li><a href="#about">About</a></li>
           <li><a href="#objective">Objective</a></li>
           <li><a href="#motivation">Motivation</a></li>
-          <li><a href="#corpus">Corpus</a></li>
+          <li><a href="#corpora">Corpora</a></li>
           <li><a href="#ldboard">Leader Board</a></li>
           <li><a href="#team">Consortium Members</a></li>
-          <li><a href="#publications">Publications</a></li>
+          <li><a href="#publication">Publications</a></li>
           <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>
@@ -92,40 +96,41 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
+  <div class="container">
+    <div class="row gy-4 align-items-center">
 
-      <div class="container">
-        <div class="row gy-4">
-
-              <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-in">
-
-                <div class="row">
-
-                <div class="col-lg-4 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-in">
-                 <img src="assets/img/logo1.png" style="height: 195px; width: 550px;">
-               </div>
-
-                <div class="col-lg-8 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-in">
-                
-              </div>
-            </div>
-                 <br><br>
-                 <!-- <h1>Centre of <span style="font-size: 37px;">Indian Language Data</span></h1> -->
-                <p>A common repository of Indian Language Data for the promotion and creation of language resources for the Human Language Technology </p>
-              
-            <p>Under BHASHINI, Funded by MeitY, Govt. of India</p>
-            <div class="d-flex">
-              <a href="#about" class="btn-get-started">About Us</a>
-            </div>
+      <!-- Left Column -->
+      <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-in">
+        <div class="row">
+          <!-- Logo -->
+          <div class="col-12 mb-3 text-center text-lg-start">
+            <img src="assets/img/logo1.png" class="img-fluid" style="max-width: 100%; height: auto;">
           </div>
-          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="100">
-            <!-- <img src="assets/img/hero-img1.png" class="img-fluid animated" alt=""> -->
-                        <img src="assets/img/coil-d.png" class="img-fluid animated" alt="">
+        </div>
 
-          </div>
+        <p>A common repository of Indian Language Data for the promotion and creation of language resources for the Human Language Technology</p>
+        <p>Under BHASHINI, Funded by MeitY, Govt. of India</p>
+
+        <div class="d-flex">
+          <a href="#about" class="btn-get-started">About Us</a>
         </div>
       </div>
 
-    </section><!-- /Hero Section -->
+      <!-- Right Column -->
+      <div class="col-lg-6 order-1 order-lg-2 hero-img text-center" data-aos="zoom-out" data-aos-delay="100">
+        <img src="assets/img/coil-d.png" class="img-fluid animated" alt="COIL-D Visual">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+ 
+
+
+
 
     <!-- Clients Section -->
     <!-- <section id="clients" class="clients section light-background">
@@ -186,6 +191,74 @@
 
     </section> --><!-- /Clients Section -->
 
+
+
+
+
+ 
+
+  <style>
+   
+
+    .process-row {
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+      gap: 25px;
+    }
+
+    .center-circle {
+      width: 180px;
+      height: 180px;
+      background-color: #ffffff;
+      border: 4px dotted #bbb;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .process-card {
+      width: 235px;
+      min-height: 150px;
+      padding: 15px;
+      border-radius: 20px;
+      text-align: left;
+      font-size: 15px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .process-card h3 {
+      margin-top: 0;
+      font-size: 17px;
+    }
+
+    .arrow {
+      width: 40px;
+      height: 2px;
+      border-top: 3px dotted #555;
+    }
+
+    /* Color Themes */
+    .purple { background-color: #D8C7FF; }
+    .blue { background-color: #B3E5FC; }
+    .pink { background-color: #F3C1E5; }
+    .green { background-color: #C8E6C9; }
+    .yellow { background-color: #FFF9C4; }
+    .orange { background-color: #FFECB3; }
+    .red { background-color: #FFCDD2; }
+    .lime { background-color: #E6EE9C; }
+  </style>
+
+
+
     <!-- About Section -->
     <section id="about" class="about section">
 
@@ -211,21 +284,71 @@ with IIT Delhi, IIIT Delhi, IIT Guwahati, IGDTUW, MIT
 Manipal, and DIBD.</b></i>
             </p>
 <hr>
-           <div class="row">
-            <div class="col-lg-2 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-in">
-                 <!-- <img src="assets/img/about.png"> -->
-               </div>
+         
 
-                <div class="col-lg-8 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-in">
-                 <img src="assets/img/about.png">
-               </div>
+         <div class="row">
+  <!-- Row 1 -->
+  <div class="process-row">
+    <div class="center-circle">Project<br>Process</div>
+    <div class="arrow"></div>
+    <div class="process-card purple">
+      <h3>Aims</h3>
+     <p>Create language resources like parallel corpora for for MT between Indian languages, as well as benchmark datasets for PoS tagging, NER, ASR, and TTS</p>
+    </div>
+    <div class="arrow"></div>
+    <div class="process-card blue">
+      <h3>Primary Focus</h3>
+      <p>Curate core Hindi data—50% from science, healthcare, agriculture, climate, tourism, judiciary; 30% education; 20% governance & 20% conversational content</p>
+    </div>
+    <div class="arrow"></div>
+    <div class="process-card pink">
+       <h3>Key Focus</h3>
+      <p>To create, preserve, and standardize language resources to support NLP research and applications </p><br><br>
+     
+    </div>
+  </div>
 
-                <div class="col-lg-2 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-in">
-                 <!-- <img src="assets/img/about.png"> -->
-               </div>
+  <!-- Row 2 -->
+  <div class="process-row">
+    <div class="process-card orange">
+      <h3>Applications</h3>
+      <p>This dataset will power Hindi-to-21 language translation and multilingual chatbots, enabling efficient cross-sector communication</p>
+    </div>
+    <div class="arrow"></div>
+    <div class="process-card lime">
+      <h3>Initiative</h3>
+      <p>Establish a central repository for Indian language data and provide a platform for developing and benchmarking HLT applications
+      </p>
+      
+    </div>
+    <div class="arrow"></div>
+    <div class="process-card red">
+      <h3>Results</h3>
+      
+      <p>With minimal post-editing, you can quickly translate large volumes of text, making it ready for publication on print and digital platforms</p>
+     
+    </div>
+  </div>
 
-             </div>
-             <br><br>
+  <!-- Row 3 -->
+  <div class="process-row" style="padding-right: 340px;">
+    <div class="process-card green">
+       <h3>Development</h3>
+      
+      <p>Develop leaderboards to evaluate MT, PoS tagging, NER, NLG, sentiment analysis, ASR, and TTS, ensuring systematic NLP assessment</p> 
+    </div>
+    <div class="arrow"></div>
+    <div class="process-card yellow">
+      <h3>Delivery</h3>
+      
+      <p>From these advanced tools at no cost surpassing existing solutions like Google Translate, while also enriching our linguistic heritage</p>
+     
+    </div>
+
+    
+    
+  </div>
+</div> 
 
     <p style="text-align: justify;">As a data partner, your organization will be acknowledged on the MeitY portal for its valuable contributions to this important national project. Upon completion, due credit will be given for your support, highlighting your role in this significant initiative.</p>
             <!-- <ul>
@@ -258,6 +381,7 @@ Manipal, and DIBD.</b></i>
       </div>
 
     </section><!-- /About Section -->
+
 
 
     <!-- Clients Section -->
@@ -449,335 +573,333 @@ Manipal, and DIBD.</b></i>
 
     </section> --><!-- /Featured Services Section -->
 
-    <!-- objective Section -->
-    <section id="objective" class="features section">
 
-      <!-- Section Title -->
-      <div class="container section-title">
-        <h2>Objective</h2>
-        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
-      </div><!-- End Section Title -->
+<br><br>
+ <section id="objective" >
+  <!-- Section Title -->
+  <div class="container section-title text-center mb-5">
+    <h2>COIL-D Project Objectives</h2>
+  </div>
 
-      <div class="container">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p style="text-align: justify; font-size: 18px; max-width: 1500px;">
+        The COIL-D (Centre of Indian Language Data) project aims to establish a unified repository of Indian language data and create a platform for systematic evaluation of Machine Translation (MT) and other Natural Language Processing (NLP) systems. It promotes the creation and preservation of language resources for Human Language Technology (HLT) applications and defines standards for linguistic benchmarking.
+      </p>
+    </div>
 
-        <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-1 d-flex align-items-center">
-          
-         </div>
-         
-         <div class="col-md-10 d-flex align-items-center">
-          <img src="assets/img/objective1.jpg" class="img-fluid" alt="" style="height: 600px; width: 1200px;">
-         </div>
-         <div class="col-md-1 d-flex align-items-center">
-          
-         </div>
+    <!-- Steps Grid -->
+    <div class="row g-4">
 
-          
-           <!--  <div class="col-md-5 d-flex align-items-center">
-            <img src="assets/img/objective.png" class="img-fluid" alt="" >
+      <!-- Step 1 -->
+      <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4" style="background-color: #CCE4F6;">
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="bi bi-journal-text me-2"></i> Step 1: Identification of Hindi language resources
+            </h5>
+            <p class="card-text">Identify and list existing Hindi datasets and tools. This helps understand current resource availability.</p>
           </div>
-          
-            <div class="col-md-7">
-            
-            <p class="fst-italic" style="text-align: justify;">
-              The COIL-D (Centre of Indian Language Data) project aims to establish a unified repository of Indian language data and create a platform for the systematic evaluation of Machine Translation (MT) and other Natural Language Processing (NLP) systems. The project will focus on
-promoting the creation and preservation of language
-resources for Human Language Technology (HLT)
-applications. It will also work on developing standards,
-guidelines, and best practices for using these resources
-to benchmark various linguistic tools.<br><br>
-The specific goals of the COIL-D project are:
-
-
-            </p>
-            <ul>
-              <li><i class="bi bi-check"></i><span> Identification of Hindi language resources</span></li>
-              <li><i class="bi bi-check"></i> <span>Acquisition of resources across target domains</span></li>
-              <li><i class="bi bi-check"></i> <span>Creation of language resources, particularly for Machine Translation, and benchmarks for NLP tools</span></li>
-               <li><i class="bi bi-check"></i> <span>Development of leaderboards for evaluating Machine Translation systems</span></li>
-                <li><i class="bi bi-check"></i> <span>Creation of leaderboards for Automatic Speech Recognition (ASR) and Text-to-Speech (TTS) technologies</span></li>
-                 <li><i class="bi bi-check"></i> <span>Establishment of benchmarks for linguistic tools like PoS taggers, NER taggers, etc</span></li>
-                 
-            </ul>
-          </div> -->
         </div>
-
-        <!-- Features Item -->
-
-        <!-- <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/features-2.svg" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
-            <h3>Corporis temporibus maiores provident</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-          </div>
-        </div> --><!-- Features Item -->
-
-       <!--  <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
-            <img src="assets/img/features-3.svg" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-7" data-aos="fade-up">
-            <h3>Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas</h3>
-            <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
-            <ul>
-              <li><i class="bi bi-check"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check"></i><span> Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check"></i> <span>Facilis ut et voluptatem aperiam. Autem soluta ad fugiat</span>.</li>
-            </ul>
-          </div>
-        </div> --><!-- Features Item -->
-
-        <!-- <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
-            <img src="assets/img/features-4.svg" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
-            <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-          </div>
-        </div> --><!-- Features Item -->
-
       </div>
 
-    </section><!-- /Features Section -->
+      <!-- Step 2 -->
+      <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4" style="background-color: #FFF7E6;">
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="bi bi-database-fill-up me-2"></i> Step 2: Acquisition of resources across target domains
+            </h5>
+            <p class="card-text">Collect data from key domains like health, education, and governance. It ensures coverage of real-world language use.</p>
+          </div>
+        </div>
+      </div>
 
+      <!-- Step 3 -->
+      <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4" style="background-color: #FDC735;">
+          <div class="card-body text-dark">
+            <h5 class="card-title">
+              <i class="bi bi-lightbulb-fill me-2"></i> Step 3: Creation of language resources and benchmarks
+            </h5>
+            <p class="card-text">Develop new data for Machine Translation and NLP. Set benchmarks to evaluate tool performance.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4" style="background-color: #CCE4F6;">
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="bi bi-bar-chart-line-fill me-2"></i> Step 4: Development of MT evaluation leaderboards
+            </h5>
+            <p class="card-text">Create leaderboards to assess translation systems. They help track progress and encourage improvements.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4" style="background-color: #FFF7E6;">
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="bi bi-clipboard-data-fill me-2"></i> Step 5: Leaderboards for ASR and TTS technologies
+            </h5>
+            <p class="card-text">Develop scoreboards to evaluate speech recognition and synthesis systems. These track accuracy, clarity, and performance.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 6 -->
+      <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4" style="background-color: #FDC735;">
+          <div class="card-body text-dark">
+            <h5 class="card-title">
+              <i class="bi bi-sliders2-vertical me-2"></i> Step 6: Benchmarks for PoS and NER taggers
+            </h5>
+            <p class="card-text">Define evaluation tests for tools like PoS and NER taggers. This ensures fair and consistent evaluation.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
  <!-- Motivation Section -->
-    <section id="motivation" class="features section">
+<section id="motivation" class="features section">
 
-      <!-- Section Title -->
-      <div class="container section-title">
-        <h2>Motivation</h2>
-        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
-      </div><!-- End Section Title -->
+  <!-- Section Title -->
+  <div class="container section-title text-center mb-5">
+    <h2>Motivation</h2>
+  </div>
 
-      <div class="container" >
+  <!-- Section Content -->
+  <div class="container">
 
-       
 
- <div class="row gy-4">
-        <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-7" >
-            <img src="assets/img/motivation1.png" style="height:500px; width: 670px;">
-          </div>
-          <div class="col-md-5" style="padding-right: 30px;">
-            <img src="assets/img/motivation2.png" style="height:550px; width:570px;">
-          </div>
-        </div>
-          
-   
-  
+    <div class="row mt-4">
+      <div class="col-lg-12">
+        <p style="text-align: justify; font-size: 18px;">
+         The primary motivation behind gathering Hindi language data is to facilitate translation into 17 other Indian languages.  Additionally, we are focusing on Tamil-to-Dravidian language translations.
+       </p>
+      </div>
+    </div>
+    <div class="row gy-4 align-items-center">
 
-<p class="fst-italic" style="text-align: justify;padding-top: 30px;">
-  A significant emphasis is placed on the creation of high- quality language resources. Efforts will be made to generate parallel corpora, aiming for 50k-100k sentence pairs for each language pair, with 2k additional sentence
-pairs for evaluation purposes. Hindi will serve as a central language, enabling efficient translation between Hindi and other Indian languages. Furthermore, the creation of
-leaderboards for MT, ASR, and TTS will providestandardized platforms for performance benchmarking. We will also establish benchmarks for various linguistic
-tools, such as PoS taggers, Named Entity Recognition (NER) systems, Natural Language Generation (NLG), and Sentiment Analysis tools, which will enhance resources
-available for Indian languages.
-            </p>
-          </div>
-        </div> <!-- Features Item-->
-
+      <!-- Left Image -->
+      <div class="col-md-6">
+        <img src="assets/img/motivation1.png" class="img-fluid rounded" style="max-height: 500px; object-fit: cover; width: 100%;">
       </div>
 
-    </section><!-- /Features Section -->
+      <!-- Right Image -->
+      <div class="col-md-6">
+        <img src="assets/img/motivation2.png" class="img-fluid rounded" style="max-height: 500px; object-fit: cover; width: 100%;">
+      </div>
+    </div>
 
+    <!-- Paragraph -->
+    <div class="row mt-4">
+      <div class="col-lg-12">
+        <p style="text-align: justify; font-size: 18px;">
+          A significant emphasis is placed on the creation of high-quality language resources. Efforts will be made to generate parallel corpora, aiming for 50k–100k sentence pairs for each language pair, with 2k additional sentence pairs for evaluation purposes. Hindi will serve as a central language, enabling efficient translation between Hindi and other Indian languages. Furthermore, the creation of leaderboards for MT, ASR, and TTS will provide standardized platforms for performance benchmarking. We will also establish benchmarks for various linguistic tools, such as PoS taggers, Named Entity Recognition (NER) systems, Natural Language Generation (NLG), and Sentiment Analysis tools, which will enhance resources available for Indian languages.
+        </p>
+      </div>
+    </div>
+  </div>
 
-
-   <style>
-    .hover-container {
-      position: relative;
-      display: inline-block;
-      cursor: pointer;
-/*      font-weight: bold;*/
-/*      color: #007BFF;*/
-
-    }
-
-    .popup-box {
-      display: none;
-      position: absolute;
-      bottom: 120%;  /* Position above the text */
-/*      left: 40%;*/
-      background-color: #f5f9fc;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      width: 450px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      z-index: 1;
-
-    }
-
-    .hover-container:hover .popup-box {
-      display: block;
-    }
-  </style>
-  
+</section>
 
 
 
 
-    <!-- Services Section -->
-    <section id="corpus" class="services section" class="contact section light-background">
+<!-- Corpora section-->
+
+<!-- Add to <head> -->
+<style>
+:root {
+  --blue-light: #CCE4F6;
+  --yellow-light: #FFF7E6;
+  --primary-text: #3C1A5B;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 330px;
+  perspective: 1000px;
+  border-radius: 1rem;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card:focus-within .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  color: var(--primary-text);
+}
+
+.flip-card-front {
+  background-color: var(--blue-light);
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 235px;
+  object-fit: cover;
+}
+
+.flip-card-front h5 {
+  padding: 12px;
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  background-color: var(--yellow-light);
+  padding: 20px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+</style>
+
+
+
+ <section id="corpora" class="services section" class="contact section light-background">
 
       <!-- Section Title -->
       <div class="container section-title" class="contact section light-background">
-        <h2>Corpus</h2>
+        <h2>Corpora</h2><br>
         <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
       </div>
+  <div class="container">
+    
+    <div class="row gy-4">
 
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6">
-             <div class="service-item  position-relative">
-              
-              <div class="hover-container">
-                 <h3>Machine Translation (MT)</h3>&nbsp;
-               <div class="popup-box" style="text-align: justify;">
+      <!-- MT -->
+      <div class="col-lg-4 col-md-6">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="assets/img/corpora/1.jpg" >
+              <h5>Machine Translation (MT)</h5>
+            </div>
+            <div class="flip-card-back">
               <strong>Machine Translation</strong><br>
               Machine Translation (MT) is the automatic conversion of text from one language to another using computer algorithms. It enables fast, large-scale translation without human intervention. Modern MT systems often use AI and deep learning to improve accuracy and fluency.
-              </div>
-              </div>
-              
             </div>
-          </div> 
-
-          
-         
-
-          <div class="col-lg-4 col-md-6">
-             <div class="service-item  position-relative">
-              
-              <div class="hover-container">
-                 <h3>Natural Language<br> Generation (NLG)</h3>
-
-               <div class="popup-box" style="text-align: justify;">
-              <strong>Natural Language Generation</strong><br>
-              Natural Language Generation (NLG) is a branch of AI that automatically produces human-like text from structured data or input. It helps systems write summaries, reports, or responses in natural language. NLG is widely used in chatbots, content creation, and data-driven reporting.
-              </div>
-              </div>
-              
-            </div>
-          </div> 
-
-
-          <div class="col-lg-4 col-md-6">
-             <div class="service-item  position-relative">
-              
-              <div class="hover-container">
-                 <h3>Part-of-Speech (PoS) Tagging</h3><br>
-
-               <div class="popup-box" style="text-align: justify; right: 60%; ">
-              <strong>Part-of-Speech (PoS) Tagging</strong><br>
-              Part-of-Speech (PoS) tagging is the process of labeling each word in a sentence with its grammatical category, such as noun, verb, adjective, etc. It helps machines understand sentence structure and is a key step in many NLP tasks like parsing and information extraction.
-              </div>
-              </div>
-              
-            </div>
-          </div> 
-
-           <div class="col-lg-4 col-md-6">
-             <div class="service-item  position-relative">
-              
-              <div class="hover-container">
-                 <h3>Named entity recognition (NER)</h3><br>
-
-               <div class="popup-box" style="text-align: justify;">
-              <strong>Named entity recognition</strong><br>
-              Named Entity Recognition (NER) is a natural language processing technique used to identify and classify entities like names of people, organizations, locations, dates, and more in text. It helps in extracting structured information from unstructured data, enabling better understanding and analysis of content.
-              </div>
-              </div>
-              
-            </div>
-          </div> 
-
-
-
-          <!-- <div class="col-lg-3 col-md-6">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-calendar4-week"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>ASR</h3>
-              </a>
-              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
-              <a href="service-details.html" class="stretched-link"></a>
-            </div>
-          </div> 
- -->
-          <div class="col-lg-4 col-md-6">
-             <div class="service-item  position-relative">
-              
-              <div class="hover-container">
-                 <h3>Automatic Speech Recognition (ASR)</h3>
-
-               <div class="popup-box" style="text-align: justify; ">
-              <strong>Automatic Speech Recognition</strong><br>
-              Automatic Speech Recognition (ASR) is a technology that converts spoken language into written text. It enables voice-based interaction with devices and is used in applications like virtual assistants, transcription services, and voice commands.
-              </div>
-              </div>
-              
-            </div>
-          </div> 
-
-          <div class="col-lg-4 col-md-6">
-             <div class="service-item  position-relative">
-              
-              <div class="hover-container">
-                 <h3>Text-to-Speech (TTS)</h3>&nbsp;
-
-               <div class="popup-box" style="text-align: justify; right: 60%;">
-              <strong>Text-to-Speech</strong><br>
-              Text-to-Speech (TTS) is a technology that converts written text into spoken voice output. It allows computers and devices to "read aloud" text, making digital content accessible to users, especially in assistive and multilingual applications.
-              </div>
-              </div>
-              
-            </div>
-          </div> 
-
-           
-
-          <!--  <div class="col-lg-3 col-md-6">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-calendar4-week"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>ASR</h3>
-              </a>
-              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
-              <a href="service-details.html" class="stretched-link"></a>
-            </div>
-          </div> --> 
-
-
-
+          </div>
+        </div>
       </div>
 
-    </section> 
+      <!-- NLG -->
+      <div class="col-lg-4 col-md-6">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="assets/img/corpora/2.jpg" >
+              <h5>Natural Language Generation (NLG)</h5>
+            </div>
+            <div class="flip-card-back">
+              <strong>Natural Language Generation</strong><br>
+              Natural Language Generation (NLG) is a branch of AI that automatically produces human-like text from structured data or input. It helps systems write summaries, reports, or responses in natural language. NLG is widely used in chatbots, content creation, and data-driven reporting.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PoS -->
+      <div class="col-lg-4 col-md-6">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="assets/img/corpora/3.jpg" >
+              <h5>Part-of-Speech (PoS) Tagging</h5>
+            </div>
+            <div class="flip-card-back">
+              <strong>PoS Tagging</strong><br>
+              Part-of-Speech (PoS) tagging is the process of labeling each word in a sentence with its grammatical category, such as noun, verb, adjective, etc. It helps machines understand sentence structure and is a key step in many NLP tasks like parsing and information extraction.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NER -->
+      <div class="col-lg-4 col-md-6">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="assets/img/corpora/4.jpg">
+              <h5>Named Entity Recognition (NER)</h5>
+            </div>
+            <div class="flip-card-back">
+              <strong>Named Entity Recognition</strong><br>
+              Named Entity Recognition (NER) is a natural language processing technique used to identify and classify entities like names of people, organizations, locations, dates, and more in text. It helps in extracting structured information from unstructured data, enabling better understanding and analysis of content.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ASR -->
+      <div class="col-lg-4 col-md-6">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="assets/img/corpora/5.jpg">
+              <h5>Automatic Speech Recognition (ASR)</h5>
+            </div>
+            <div class="flip-card-back">
+              <strong>Automatic Speech Recognition</strong><br>
+              Automatic Speech Recognition (ASR) is a technology that converts spoken language into written text. It enables voice-based interaction with devices and is used in applications like virtual assistants, transcription services, and voice commands.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TTS -->
+      <div class="col-lg-4 col-md-6">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="assets/img/corpora/6.jpg">
+              <h5>Text-to-Speech (TTS)</h5>
+            </div>
+            <div class="flip-card-back">
+              <strong>Text-to-Speech</strong><br>
+              Text-to-Speech (TTS) is a technology that converts written text into spoken voice output. It allows computers and devices to "read aloud" text, making digital content accessible to users, especially in assistive and multilingual applications.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
     <!-- LEADERBOARD Section -->
@@ -984,201 +1106,201 @@ the inferencing using selected model.</li></ul></p> -->
 
     </section> --><!-- /Portfolio Section -->
 
-    <!-- Team Section -->
-    <section id="team" class="team section">
-
-      <!-- Section Title -->
-      <div class="container section-title">
-        <h2>Consortium Members</h2>
-        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" > <!-- data-aos="fade-up" data-aos-delay="100" -->
-            <div class="team-member">
-              <div class="member-img">
-                <a href="https://ekbalasif.github.io/" target="blank"><img src="assets/img/team/1.jpg" class="img-fluid" alt=""></a>
-               <!--  <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div> -->
-              </div>
-              <div class="member-info">
-                 <a href="https://ekbalasif.github.io/" target="blank"><h4>Dr. Asif Ekbal<br> </a> Principal Investigator</h4>
-                <span>Associate Professor<br>
-                      Computer Science and Engineering<br>
-                       IIT Patna, India
-</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" >
-            <!-- data-aos-delay="200" -->
-            <div class="team-member">
-              <div class="member-img">
-                <a href="https://web.iitd.ac.in/~avaidya/" target="blank"><img src="assets/img/team/2.png" class="img-fluid" alt=""></a>
-                <!-- <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div> -->
-              </div>
-              <div class="member-info">
-                <a href="https://web.iitd.ac.in/~avaidya/" target="blank"><h4>Dr. Ashwini Vaidya</a></h4>
-                <span>Assistant Professor<br>
-                  HSS<br>
-                  IIT Delhi, India
-</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" >
-
-          <!-- data-aos-delay="300" -->
-            <div class="team-member">
-              <div class="member-img">
-                 <a href="https://tanmoychak.com" target="blank"><img src="assets/img/team/3.png" class="img-fluid" alt=""></a>
-                <!-- <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div> -->
-              </div>
-              <div class="member-info">
-                <a href="https://tanmoychak.com" target="blank"><h4> Dr. Tanmoy Chakraborty</a></h4>
-                <span>Associate Professor<br>
-                    Electrical Engineering<br>
-                    IIT Delhi, India
-</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch"  >
-            <div class="team-member">
-              <div class="member-img">
-                <a href="https://www.iitg.ac.in/samit/" target="blank"><img src="assets/img/team/4.jpg" class="img-fluid" alt=""></a>
-                <!-- <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div> -->
-              </div>
-              <div class="member-info">
-                <a href="https://www.iitg.ac.in/samit/" target="blank"><h4>Dr. Samit Bhattacharyya</a></h4>
-                <span>Associate Professor<br>
-                  Department of Computer Science and Engineering<br>
-                  IIT Guwahati, India</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-
-           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" >
-            <div class="team-member">
-              <div class="member-img">
-                <a href="https://faculty.iiitd.ac.in/~shad.akhtar/" target="blank"><img src="assets/img/team/5.jpg" class="img-fluid" alt=""></a>
-                <!-- <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div> -->
-              </div>
-              <div class="member-info">
-                <a href="https://faculty.iiitd.ac.in/~shad.akhtar/" target="blank"><h4>Dr. Shad Akhtar</a></h4>
-                <span>
-                      Assistant Professor<br>
-                     Department Computer Science and Engineering<br>
-                      IIIT Delhi, India</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-
-           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" >
-            <div class="team-member">
-              <div class="member-img">
-                <a href="https://in.linkedin.com/in/drpoonambansal" target="blank"><img src="assets/img/team/6.jpg" class="img-fluid" alt=""></a>
-                <!-- <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div> -->
-              </div>
-              <div class="member-info">
-                <a href="https://in.linkedin.com/in/drpoonambansal" target="blank"><h4>Dr. Poonam Bansal</a></h4>
-                <span>Professor<br>
-                       Department of AI & Data Sciences<br>
-                       IGDTUW, India</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-
-           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="team-member">
-              <div class="member-img">
-                <a href="https://dramitadev.com/" target="blank"><img src="assets/img/team/7.jpg" class="img-fluid" alt=""></a>
-                <!-- <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div> -->
-              </div>
-              <div class="member-info">
-                 <a href="https://dramitadev.com/" target="blank"><h4>Dr. Amita Dev</a></h4>
-
-               <span>Vice-Chancellor<br>
-               IGDTUW, India
-             </span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-
-           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="team-member">
-              <div class="member-img">
-                <a href="https://www.manipal.edu/mit/department-faculty/faculty-list/muralikrishna-sn/_jcr_content.html" target="blank"><img src="assets/img/team/8.jpg" class="img-fluid" alt=""></a>
-                <!-- <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div> -->
-              </div>
-              <div class="member-info">
-                <a href="https://www.manipal.edu/mit/department-faculty/faculty-list/muralikrishna-sn/_jcr_content.html" target="blank"><h4>Dr. Muralikrishna S N</a></h4>
-                <span>Assistant Professor (Senior)
-                  Manipal Institute of Technology, MAHE<br> 
-                  Manipal, India</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
 
 
 
- 
+
+    <section id="team" class="team section bg-light py-5">
+  <style>
+  .card-title {
+    margin-bottom: 0.5rem;
+  }
+  .card-body p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .card-body p:last-child {
+    margin-bottom: 0.2rem; /* reduced gap */
+  }
+  .card-footer i {
+    font-size: 1.2rem;
+  }
+  .card-body h5{
+  font-size: 20px;
+}
+</style>
+
+
+  <div class="container">
+    <div class="section-title text-center mb-5">
+      <h2 class="fw-bold">Consortium Members</h2>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Dr. Asif Ekbal -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
+          <img src="assets/img/team/1.jpg" class="card-img-top rounded-circle mx-auto" style="width: 140px; height: 140px; object-fit: cover;" alt="Asif Ekbal">
+          <div class="card-body">
+            <h5 class="card-title mb-0"><a href="https://ekbalasif.github.io/" target="_blank">Dr. Asif Ekbal</a></h5>
+            <p class="text-muted small mt-1 mb-1">Principal Investigator</p>
+            <p class="small">Associate Professor<br>Computer Science and Engineering<br>IIT Patna, India</p>
+          </div>
+          <div class="card-footer bg-transparent border-0">
+           <a href="https://scholar.google.com/citations?user=IAL_F04AAAAJ" target="_blank" class="me-3 text-dark">
+        <i class="bi bi-google"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/asif-ekbal-3b8a4517/" target="_blank" class="text-dark">
+        <i class="bi bi-linkedin"></i>
+      </a>
+          </div>
         </div>
-
       </div>
 
+      <!-- Dr. Ashwini Vaidya -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
+          <img src="assets/img/team/2.png" class="card-img-top rounded-circle mx-auto" style="width: 140px; height: 140px; object-fit: cover;" alt="Ashwini Vaidya">
+          <div class="card-body">
+            <h5 class="card-title mb-0"><a href="https://web.iitd.ac.in/~avaidya/" target="_blank">Dr. Ashwini Vaidya</a></h5>
+            &nbsp;
+            <p class="small">Assistant Professor<br>HSS<br>IIT Delhi, India</p>
+          </div>
+          <div class="card-footer bg-transparent border-0">
+            <a href="https://scholar.google.com/citations?hl=en&user=9XRHAqQAAAAJ" target="_blank" class="me-3 text-dark">
+        <i class="bi bi-google"></i>
+      </a>
+      <a href="https://in.linkedin.com/in/ashwini-vaidya-425b90a" target="_blank" class="text-dark">
+        <i class="bi bi-linkedin"></i>
+      </a>
+          </div>
+        </div>
       </div>
 
-    </section><!-- /Team Section -->
+      <!-- Dr. Tanmoy Chakraborty -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
+          <img src="assets/img/team/3.png" class="card-img-top rounded-circle mx-auto" style="width: 140px; height: 140px; object-fit: cover;" alt="Tanmoy Chakraborty">
+          <div class="card-body">
+            <h5 class="card-title mb-0"><a href="https://tanmoychak.com" target="_blank">Dr. Tanmoy Chakraborty</a></h5>
+            &nbsp;
+            <p class="small">Associate Professor<br>Electrical Engineering<br>IIT Delhi, India</p>
+          </div>
+          <div class="card-footer bg-transparent border-0">
+            <a href="https://scholar.google.com/citations?hl=en&user=TDo997EAAAAJ" target="_blank" class="me-3 text-dark">
+        <i class="bi bi-google"></i>
+      </a>
+      <a href="https://in.linkedin.com/in/tanmoy-chakraborty-89553324" target="_blank" class="text-dark">
+        <i class="bi bi-linkedin"></i>
+      </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dr. Samit Bhattacharyya -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
+          <img src="assets/img/team/4.jpg" class="card-img-top rounded-circle mx-auto" style="width: 140px; height: 140px; object-fit: cover;" alt="Samit Bhattacharyya">
+          <div class="card-body">
+            <h5 class="card-title mb-0"><a href="https://www.iitg.ac.in/samit/" target="_blank">Dr. Samit Bhattacharyya</a></h5>
+
+           &nbsp;
+            <p class="small">Associate Professor<br>Computer Science and Engineering<br>IIT Guwahati, India</p>
+          </div>
+          <div class="card-footer bg-transparent border-0">
+            <a href="https://scholar.google.com/citations?hl=en&user=iG_SLV8AAAAJ" target="_blank" class="me-3 text-dark">
+        <i class="bi bi-google"></i>
+      </a>
+      <a href="https://in.linkedin.com/in/samit-bhattacharya-b55a40b" target="_blank" class="text-dark">
+        <i class="bi bi-linkedin"></i>
+      </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dr. Shad Akhtar -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
+          <img src="assets/img/team/5.jpg" class="card-img-top rounded-circle mx-auto" style="width: 140px; height: 140px; object-fit: cover;" alt="Shad Akhtar">
+          <div class="card-body">
+            <h5 class="card-title mb-0"><a href="https://faculty.iiitd.ac.in/~shad.akhtar/" target="_blank">Dr. Shad Akhtar</a></h5>
+            &nbsp;
+            <p class="small">Assistant Professor<br>Computer Science and Engineering<br>IIIT Delhi, India</p>
+          </div>
+          <div class="card-footer bg-transparent border-0">
+            <a href="https://scholar.google.com/citations?hl=en&user=KUcO6LAAAAAJ" target="_blank" class="me-3 text-dark">
+              <i class="bi bi-google"></i>
+            </a>
+            <a href=" https://in.linkedin.com/in/shadakhtar" target="_blank" class="text-dark">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dr. Poonam Bansal -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
+          <img src="assets/img/team/6.jpg" class="card-img-top rounded-circle mx-auto" style="width: 140px; height: 140px; object-fit: cover;" alt="Poonam Bansal">
+          <div class="card-body">
+            <h5 class="card-title mb-0"><a href="https://in.linkedin.com/in/drpoonambansal" target="_blank">Dr. Poonam Bansal</a></h5>
+            &nbsp;
+            <p class="small">Professor<br>AI & Data Science<br>IGDTUW, India</p>
+          </div>
+          <div class="card-footer bg-transparent border-0">
+            <a href="https://scholar.google.co.in/citations?user=KKAIMmwAAAAJ&hl=en" target="_blank" class="me-3 text-dark">
+              <i class="bi bi-google"></i>
+            </a>
+            <a href="https://in.linkedin.com/in/drpoonambansal" target="_blank" class="text-dark">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dr. Amita Dev -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
+          <img src="assets/img/team/7.jpg" class="card-img-top rounded-circle mx-auto" style="width: 140px; height: 140px; object-fit: cover;" alt="Amita Dev">
+          <div class="card-body">
+            <h5 class="card-title mb-0"><a href="https://dramitadev.com/" target="_blank">Dr. Amita Dev</a></h5>
+            &nbsp;
+            <p class="text-muted small mt-1 mb-1">Vice-Chancellor</p>
+            <p class="small">IGDTUW, India</p>
+          </div>
+          <div class="card-footer bg-transparent border-0">
+            <a href="https://www.researchgate.net/profile/Amita-Dev" target="_blank" class="me-3 text-dark"><i class="bi bi-google"></i></a>
+            <a href="https://in.linkedin.com/in/prof-amita-dev-06a47642" target="_blank" class="text-dark"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dr. Muralikrishna S N -->
+      <div class="col-lg-3 col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
+          <img src="assets/img/team/8.jpg" class="card-img-top rounded-circle mx-auto" style="width: 140px; height: 140px; object-fit: cover;" alt="Muralikrishna">
+          <div class="card-body">
+            <h5 class="card-title mb-0"><a href="https://muralikrishnasn.github.io/" target="_blank">Dr. Muralikrishna S N</a></h5>
+            &nbsp;
+            <p class="text-muted small mt-1 mb-1">Assistant Professor (Senior)</p>
+            <p class="small">Manipal Institute of Technology, MAHE<br>Manipal, India</p>
+          </div>
+          <div class="card-footer bg-transparent border-0">
+            <a href="https://scholar.google.com/citations?user=CRP1To4AAAAJ&hl=en" target="_blank" class="me-3 text-dark"><i class="bi bi-google"></i></a>
+            <a href="https://in.linkedin.com/in/muralikrishna-sn" target="_blank" class="text-dark"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+   
+
+
+
 
     <!-- Pricing Section -->
     <!-- <section id="pricing" class="pricing section light-background"> -->
@@ -1319,6 +1441,8 @@ the inferencing using selected model.</li></ul></p> -->
 
     </section> --><!-- /Faq Section -->
 
+    <section id="publication" style="min-height: 10px;"></section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact section light-background">
 
@@ -1351,7 +1475,7 @@ the inferencing using selected model.</li></ul></p> -->
                   <h3>Call Us</h3>
                   <p>+91 6115 233 338
 
-</p>&nbsp;
+                  </p>&nbsp;
                   &nbsp;
                 </div>
               </div><!-- End Info Item -->
@@ -1429,7 +1553,7 @@ the inferencing using selected model.</li></ul></p> -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
       </div>
-    </div>
+    </div><br><br><br><br><br>
   </footer>
 
   <!-- Scroll Top -->
@@ -1455,6 +1579,85 @@ the inferencing using selected model.</li></ul></p> -->
 </script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+ <!--  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".navmenu a");
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        // Remove 'active' from all links
+        navLinks.forEach(l => l.classList.remove("active"));
+
+        // Add 'active' to the clicked link
+        this.classList.add("active");
+
+        // If dropdowns are involved, optional: close others
+        const dropdowns = document.querySelectorAll(".navmenu .dropdown ul");
+        dropdowns.forEach(drop => drop.classList.remove("dropdown-active"));
+      });
+    });
+  });
+</script> -->
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".navmenu a");
+    const sections = Array.from(document.querySelectorAll("section[id]"));
+
+    // Click: activate clicked menu item
+    navLinks.forEach(link => {
+      link.addEventListener("click", function () {
+        navLinks.forEach(l => l.classList.remove("active"));
+        this.classList.add("active");
+      });
+    });
+
+    // Scroll: activate menu based on visible section
+    function activateNavOnScroll() {
+      let scrollY = window.pageYOffset;
+      let currentSectionId = null;
+
+      for (let section of sections) {
+        const height = section.offsetHeight;
+        const top = section.offsetTop - 100; // offset for sticky header
+
+        if (height > 0 && scrollY >= top && scrollY < top + height) {
+          currentSectionId = section.getAttribute("id");
+          break;
+        }
+      }
+
+      // Update nav links
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (currentSectionId && link.getAttribute("href") === "#" + currentSectionId) {
+          link.classList.add("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", activateNavOnScroll);
+  });
+</script>
+
+<script>
+function openModal(id) {
+  document.getElementById(id).style.display = 'block';
+}
+function closeModal(id) {
+  document.getElementById(id).style.display = 'none';
+}
+window.onclick = function(event) {
+  const modals = document.querySelectorAll('.custom-modal');
+  modals.forEach(modal => {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  });
+}
+</script>
+
 
 </body>
 
