@@ -1337,14 +1337,14 @@ section,
 
 .team .team-member .member-info span {
   display: block;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
 
 .team .team-member .member-info p {
   font-style: italic;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 26px;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
@@ -1543,7 +1543,7 @@ section,
 .contact .info-item p {
   padding: 0;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .contact .php-email-form {
