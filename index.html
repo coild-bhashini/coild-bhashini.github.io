@@ -126,6 +126,127 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
   <div class="container">
+    <div class="news-popup">
+
+  <!-- <div class="news-icon">
+    <i class="bi bi-megaphone-fill"></i>
+  </div> -->
+
+  <div class="news-body">
+
+    <div class="news-label">Latest Announcement</div>
+
+    <h3>
+      IIT-Patna’s AI Initiative Set to Break India’s Digital Language Barrier
+    </h3>
+
+    <p>
+      COIL-D under BHASHINI is enabling seamless multilingual AI communication across India.
+    </p>
+
+    <a href="https://timesofindia.indiatimes.com/city/patna/iit-ps-ai-initiative-set-to-break-indias-digital-language-barrier/amp_articleshow/131021449.cms"
+       target="_blank"
+       class="news-link">
+      Read full news →
+    </a>
+
+  </div>
+
+</div>
+<style>
+.news-popup{
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+    padding: 16px 18px;
+    
+
+    border-radius: 14px;
+
+    background: color-mix(in srgb, var(--background-color, #0b1220) 92%, white 8%);
+
+    border: 1px solid color-mix(in srgb, var(--accent-color, #ffc107) 25%, transparent);
+
+    /* 🔥 STRONGER LAYERED SHADOW */
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.08),
+        0 10px 25px rgba(0,0,0,0.12),
+        0 18px 45px rgba(0,0,0,0.18);
+
+    transition: 0.3s ease;
+}
+/* hover lift */
+.news-popup:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgba(0,0,0,0.18);
+}
+
+/* icon */
+.news-icon{
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: color-mix(in srgb, var(--accent-color, #ffc107) 18%, transparent);
+    color: var(--accent-color, #ffc107);
+
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+/* label */
+.news-label{
+    font-size: 14px;
+    font-weight: 700;
+
+    color: var(--accent-color, #ffc107);
+
+    margin-bottom: 6px;
+
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+/* title */
+.news-body h3{
+    font-size: 16px;
+    font-weight: 700;
+
+    color: var(--heading-color, #ffffff);
+
+    margin: 0 0 6px 0;
+}
+
+/* text */
+.news-body p{
+    font-size: 13px;
+
+    color: color-mix(in srgb, var(--default-color, #ffffff) 70%, transparent);
+
+    margin: 0 0 10px 0;
+}
+
+/* link */
+.news-link{
+    font-size: 13px;
+    font-weight: 600;
+
+    color: var(--accent-color, #ffc107);
+
+    text-decoration: none;
+}
+
+.news-link:hover{
+    text-decoration: underline;
+}
+
+</style>
     <div class="row gy-4 align-items-center">
 
       <!-- Left Column -->
