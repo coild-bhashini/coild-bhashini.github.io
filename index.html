@@ -2196,63 +2196,217 @@ the inferencing using selected model.</li></ul></p> -->
     <section id="publication" style="min-height: 5px;"></section>
 
 
-<style>/* Career Section */
+<style>
+/* ===== CAREER SECTION ===== */
+#career {
+  background: #f7f9fc;
+  padding: 70px 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+#career .container {
+  width: 92%;
+  max-width: 1350px;
+  margin: auto;
+}
+
+/* Section Heading */
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-title h2 {
+  font-size: 30px;
+  color: #16344f;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.section-title p {
+  max-width: 1050px;
+  margin: auto;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4f5b66;
+}
+
+/* Layout */
 .careers {
   display: grid;
-  gap: 20px;
   grid-template-columns: 1fr;
-}
-@media (min-width: 900px) {
-  .careers { grid-template-columns: 1fr 320px; }
+  gap: 22px;
+  margin-bottom: 40px;
 }
 
-.job-list { display: flex; flex-direction: column; gap: 16px; }
+@media (min-width: 992px) {
+  .careers {
+    grid-template-columns: 1fr 330px;
+    align-items: start;
+  }
+}
 
+/* Left Job List */
+.job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Job Card */
 .job-card {
-  background: #E6F2FA;   /* light blue (a bit darker than before) */
-  border-radius: 14px;
-  padding: 18px;
-  box-shadow: 0 4px 12px rgba(12, 40, 70, 0.08);
+  background: #e8f3fb;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 6px 22px rgba(12, 40, 70, 0.08);
+  transition: 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.03);
 }
 
-.job-header { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
-.job-title { font-size: 18px; margin: 0; font-weight: 600; }
+.job-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(12, 40, 70, 0.12);
+}
 
+/* Header */
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.job-title {
+  font-size: 25px;
+  font-weight: 700;
+  color: #18344c;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.job-meta {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #4e5965;
+  line-height: 1.7;
+}
+
+.highlight {
+  color: #0d4d71;
+  font-weight: 700;
+}
+
+.mono {
+  font-family: monospace;
+  color: #173b52;
+  font-size: 14px;
+}
+
+/* Badge */
 .badge {
-  background: #FFD95A;   /* soft yellow (slightly darker) */
-  color: #5c4400;
-  padding: 6px 10px;
+  background: #ffd75c;
+  color: #6d4d00;
+  padding: 8px 14px;
   border-radius: 999px;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-.job-meta { margin-top: 8px; font-size: 14px; color: #444; }
-.job-section { margin-top: 12px; }
-.job-section h4 { margin: 0 0 8px 0; font-size: 15px; }
+/* Sections */
+.job-section {
+  margin-top: 18px;
+}
 
+.job-section h4 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: #1c3852;
+}
+
+.job-section ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.job-section li {
+  margin-bottom: 10px;
+  color: #37434f;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* Sidebar */
 .side-card {
-  background: #FFF4E0;   /* light cream */
-  border-radius: 14px;
-  padding: 18px;
-  box-shadow: 0 4px 12px rgba(12, 40, 70, 0.08);
+  background: #fff3dc;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 6px 22px rgba(12, 40, 70, 0.08);
+  position: sticky;
+  top: 100px;
 }
 
+.side-card h3 {
+  font-size: 24px;
+  line-height: 1.15;
+  margin-bottom: 24px;
+  color: #16344f;
+}
+
+.side-card p {
+  color: #404b57;
+  line-height: 1.4;
+  font-size: 17px;
+  margin-bottom: 16px;
+}
+
+.side-card strong {
+  color: #1f3448;
+}
+
+/* Button */
 .apply-button {
   display: inline-block;
-  margin-top: 12px;
-  background: #FFD95A;   /* soft yellow button */
+  margin-top: 18px;
+  background: #ffd75c;
   color: #000;
   font-weight: 700;
-  padding: 10px 16px;
-  border-radius: 10px;
+  padding: 14px 22px;
+  border-radius: 12px;
   text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.note { margin-top: 22px; font-size: 13px; color: #555; }
-.highlight { color: #0b4b6b; font-weight: 600; }
-.mono { font-family: monospace; font-size: 13px; color: #0b2430; }
+.apply-button:hover {
+  transform: translateY(-2px);
+  background: #ffcb27;
+}
 
+/* Divider */
+.career-divider {
+  margin: 60px 0;
+  border: none;
+  border-top: 1px solid #dce3ea;
+}
+
+/* Footer Note */
+.note {
+  margin-top: 45px;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(12, 40, 70, 0.06);
+}
+
+.note p {
+  margin-bottom: 10px;
+  color: #4d5966;
+  line-height: 1.7;
+  font-size: 16px;
+}
 </style>
 <!-- ===== Career Section Start ===== -->
 <section id="career" style="background:#ffffff; padding:60px 0;">
@@ -2266,8 +2420,254 @@ the inferencing using selected model.</li></ul></p> -->
 
 
 
-  
-  
+   <!-- Career Layout -->
+    <div class="careers">
+
+      <!-- LEFT SIDE -->
+      <div class="job-list">
+
+        <!-- Job 1 -->
+        <article class="job-card">
+
+          <div class="job-header">
+
+            <div>
+              <h3 class="job-title">
+                Junior Research Associate (Technical)
+              </h3>
+
+              <div class="job-meta">
+                Posts:
+                <span class="highlight">03</span>
+
+                • Salary:
+                <span class="mono">
+                  Rs. 50,000/month
+                </span>
+
+                (with 10% annual increment)
+              </div>
+            </div>
+
+            <div class="badge">
+              Project No. 1155
+            </div>
+
+          </div>
+
+          <div class="job-section">
+            <h4>Minimum Eligibility</h4>
+
+            <ul>
+              <li>B. Tech./B.E. in Computer Science and Engineering, Information Technology, AI and DS, Electronics/Electronics and Tele Communication/Electrical Engineering or MCA or M.Sc (Computer Science).
+              </li>
+            </ul>
+          </div>
+
+         
+
+        </article>
+
+        <!-- Job 2 -->
+        <article class="job-card">
+
+          <div class="job-header">
+
+            <div>
+              <h3 class="job-title">
+                Junior Research Associate – Language (Hindi -01, Maithili-01, Odia-02 and Bangla-01)
+              </h3>
+
+              <div class="job-meta">
+                Posts:
+                <span class="highlight">05</span>
+
+                • Salary:
+                <span class="mono">
+                  Rs. 45,000/month
+                </span>
+
+                (with 10% annual increment)
+              </div>
+            </div>
+
+            <!-- <div class="badge">
+              1155
+            </div> -->
+
+          </div>
+
+          <div class="job-section">
+            <h4>Minimum Eligibility</h4>
+
+            <ul>
+              <li>B.A. (Language or Linguistics) with 2 years of experience in the relevant area; or</li>
+<li>M.A. (Language or Linguistics) with
+exposure in the relevant area; or</li>
+<li>M.Phil./PhD in language or linguistics
+or in the related discipline.</li>
+<li>Knowledge in
+Hindi/Maithili/Odia/Bengali languages
+              </li>
+            </ul>
+          </div>
+
+         
+
+        </article>
+
+        <!-- Job 3 -->
+        <article class="job-card">
+
+          <div class="job-header">
+
+            <div>
+              <h3 class="job-title">
+                Liaison Officer
+              </h3>
+
+              <div class="job-meta">
+                Posts:
+                <span class="highlight">01</span>
+
+                • Salary:
+                <span class="mono">
+                  Rs. 50,000/month
+                </span>
+
+                (with 10% annual increment)
+              </div>
+            </div>
+
+            <!-- <div class="badge">
+              Project No. 1155
+            </div> -->
+
+          </div>
+
+          <div class="job-section">
+            <h4>Minimum Eligibility</h4>
+
+            <ul>
+              <li>M.Sc (Computer Science or related area)/MCA/ M.A. (Mass Communication) with 1 year of experience; or</li>
+             <li>M.E./M.Tech./MBA</li>
+            </ul>
+          </div>
+
+          
+
+        </article>
+
+        <!-- Job 4 -->
+        <article class="job-card">
+
+          <div class="job-header">
+
+            <div>
+              <h3 class="job-title">
+                Office Assistant
+              </h3>
+
+              <div class="job-meta">
+                Posts:
+                <span class="highlight">01</span>
+
+                • Salary:
+                <span class="mono">
+                  Rs. 30,000/month
+                </span>
+
+                (with 10% annual increment)
+              </div>
+            </div>
+
+            <!-- <div class="badge">
+              Project No. 1155
+            </div> -->
+
+          </div>
+
+          <div class="job-section">
+            <h4>Minimum Eligibility</h4>
+
+            <ul>
+              <li>B.Com./B.Sc./BCA/Diploma (with 1-year experience), or B. Tech./B.E.
+              </li>
+            </ul>
+          </div>
+
+          
+
+        </article>
+
+      </div>
+
+      <!-- RIGHT SIDEBAR -->
+      <aside class="side-card">
+
+        <h3>
+          Apply / Important Details
+        </h3>
+
+        <p>
+          <strong>Project:</strong>
+          COIL-D: Centre of Indian Language Data
+          <br><br>
+
+          <strong>Sponsoring Agency:</strong>
+          MeitY, Government of India
+          <br><br>
+
+          <strong>Duration:</strong>
+          Initially till 31.03.2027 (extendable)
+          <br><br>
+
+          <strong>Nature:</strong>
+          Temporary / Contractual
+        </p>
+
+        
+
+        <p>
+          <strong>First Round Deadline:</strong><br>
+          <span class="highlight">10 June 2026</span>
+        </p>
+
+        <a class="apply-button"
+           href="forms/adv3.pdf"
+           target="_blank">
+           Apply Now
+        </a>
+
+      </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="note">
+
+      <p>
+        <strong>Note:</strong>
+        All the above positions are temporary in nature. The CI may terminate the contract in case the performance is not found satisfactory.
+      </p>
+
+      <p>
+        Advertisement No:
+        <span class="mono">
+          R&D/1155/CIL/583 
+        </span>
+      </p>
+
+      <p>
+        Advertisement Date:
+        <span class="mono">
+          25-05-2026
+        </span>
+      </p>
+
+    </footer>
+
+  <hr>
   <article class="job-card">
   <div class="job-header">
     <div>
