@@ -128,66 +128,115 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
   <div class="container">
+   
 
-<!-- ================= POPUP STYLE NEWS ANNOUNCEMENT ================= -->
+ <style>
 
-<div class="news-popup">
 
-  
+/* ================= SLIDER WRAPPER ================= */
 
-  <div class="news-body">
+.news-slider{ 
+  width: 100%; 
+  overflow: hidden; 
+  position: relative; 
+  border-radius: 14px; 
+  padding-left: 60px; 
+  padding-right: 20px; 
+  box-sizing: border-box; }
 
-    <div class="news-label">Latest Announcement</div>
 
-    <h3>
-      IIT-Patna’s AI Initiative Set to Break India’s Digital Language Barrier
-    </h3>
+/* DARK FADE LEFT */
+.news-slider::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
 
-    <p>
-      COIL-D under BHASHINI is enabling seamless multilingual AI communication across India.
-    </p>
+    width: 70px;
+    height: 100%;
 
-    <a href="https://timesofindia.indiatimes.com/city/patna/iit-ps-ai-initiative-set-to-break-indias-digital-language-barrier/amp_articleshow/131021449.cms"
-       target="_blank"
-       class="news-link">
+    z-index: 2;
 
-      Read full news →
-    </a>
+    background: linear-gradient(
+        to right,
+        var(--background-color, #0b1220),
+        transparent
+    );
+}
 
-  </div>
+/* DARK FADE RIGHT */
+.news-slider::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
 
-</div>
+    width: 70px;
+    height: 100%;
 
-<!-- ================= CSS ================= -->
+    z-index: 2;
 
-<style>
+    background: linear-gradient(
+        to left,
+        var(--background-color, #0b1220),
+        transparent
+    );
+}
 
-.news-popup{
+/* ================= TRACK ================= */
+
+.news-track{
     display: flex;
-    align-items: flex-start;
-    gap: 14px;
+    gap: 22px;
+
+    width: max-content;
+
+    animation: scrollNews 50s linear infinite;
+}
+
+/* PAUSE ON HOVER */
+.news-slider:hover .news-track{
+    animation-play-state: paused;
+}
+
+/* ================= CARD ================= */
+
+.news-card{
+    width: 450px;
+    height: 180px;
 
     padding: 16px 18px;
-   
 
     border-radius: 14px;
 
-    /* 🔥 Theme-aware background */
-    background: color-mix(in srgb, var(--background-color, #0b1220) 92%, white 8%);
+    /* theme-aware background */
+    background:
+      color-mix(
+        in srgb,
+        var(--background-color, #0b1220) 92%,
+        white 8%
+      );
 
-    border: 1px solid color-mix(in srgb, var(--accent-color, #ffc107) 25%, transparent);
+    border: 1px solid
+      color-mix(
+        in srgb,
+        var(--accent-color, #ffc107) 25%,
+        transparent
+      );
 
-    /* ✨ STRONG FLOATING SHADOW */
+    /* floating shadow */
     box-shadow:
         0 4px 10px rgba(0,0,0,0.08),
         0 10px 25px rgba(0,0,0,0.12),
         0 18px 45px rgba(0,0,0,0.18);
 
     transition: 0.3s ease;
+
+    flex-shrink: 0;
 }
 
 /* hover floating effect */
-.news-popup:hover{
+.news-card:hover{
     transform: translateY(-4px);
 
     box-shadow:
@@ -196,26 +245,8 @@
         0 25px 60px rgba(0,0,0,0.22);
 }
 
-/* icon circle */
-.news-icon{
-    width: 42px;
-    height: 42px;
+/* ================= LABEL ================= */
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: color-mix(in srgb, var(--accent-color, #ffc107) 18%, transparent);
-    color: var(--accent-color, #ffc107);
-
-    font-size: 16px;
-
-    flex-shrink: 0;
-}
-
-/* label */
 .news-label{
     font-size: 11px;
     font-weight: 700;
@@ -228,28 +259,38 @@
     text-transform: uppercase;
 }
 
-/* title */
-.news-body h3{
+/* ================= TITLE ================= */
+
+.news-card h3{
     font-size: 16px;
     font-weight: 700;
 
     color: var(--heading-color, #ffffff);
 
     margin: 0 0 6px 0;
+
+    line-height: 1.5;
 }
 
-/* text */
-.news-body p{
+/* ================= TEXT ================= */
+
+.news-card p{
     font-size: 13px;
 
-    color: color-mix(in srgb, var(--default-color, #ffffff) 70%, transparent);
+    color:
+      color-mix(
+        in srgb,
+        var(--default-color, #ffffff) 70%,
+        transparent
+      );
 
     margin: 0 0 10px 0;
 
     line-height: 1.5;
 }
 
-/* link */
+/* ================= LINK ================= */
+
 .news-link{
     font-size: 13px;
     font-weight: 600;
@@ -263,7 +304,101 @@
     text-decoration: underline;
 }
 
+/* ================= AUTO SLIDER ================= */
+
+@keyframes scrollNews{
+
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(calc(-386px * 3));
+    }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    body{
+        padding: 20px;
+    }
+
+    .news-card{
+        width: 280px;
+    }
+
+    .news-slider::before,
+    .news-slider::after{
+        width: 40px;
+    }
+
+}
 </style>
+
+
+<!-- ================= ANNOUNCEMENT SLIDER ================= -->
+
+<div class="news-slider">
+
+    <div class="news-track">
+
+        <!-- CARD 1 -->
+        <div class="news-card">
+
+            <div class="news-label">
+                We are Hiring!
+            </div>
+
+            <h3>
+                Currently we hiring for different positions.
+            </h3>
+
+          <p>We are hiring for JRA (Technical & Language), Liaison Officer and Office Assistant positions under the COIL-D initiative at IIT Patna.</p>
+
+            <a href="hhttps://coild-bhashini.github.io/#career"
+               target="_blank"
+               class="news-link">
+
+               To apply →
+            </a>
+
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="news-card">
+
+            <div class="news-label">
+                News Update
+            </div>
+
+            <h3>
+      IIT-Patna’s AI Initiative Set to Break India’s Digital Language Barrier
+    </h3>
+
+            <p>
+      COIL-D under BHASHINI is enabling seamless multilingual AI communication across India.
+    </p>
+
+            <a href="https://timesofindia.indiatimes.com/city/patna/iit-ps-ai-initiative-set-to-break-indias-digital-language-barrier/amp_articleshow/131021449.cms"
+       target="_blank"
+       class="news-link">
+
+      Read full news →
+    </a>
+
+        </div>
+
+      
+
+        
+    </div>
+
+</div>
+
+
 
     <div class="row gy-4 align-items-center">
 
@@ -276,8 +411,7 @@
           </div>
         </div>
 
-        <p>A common repository of Indian Language Data for the promotion and creation of language resources for the Human Language Technology</p>
-        <p>Under BHASHINI, Funded by MeitY, Govt. of India</p>
+        <p style="font-size: 18px;">A common repository of Indian Language Data for the promotion and creation of language resources for the Human Language Technology<br><br><span style="font-size: 16px;">Under BHASHINI, Funded by MeitY, Govt. of India</span></p>
 
         <div class="d-flex">
           <a href="#about" class="btn-get-started">About Us</a>
@@ -2334,7 +2468,7 @@ the inferencing using selected model.</li></ul></p> -->
 .job-section li {
   margin-bottom: 10px;
   color: #37434f;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.4;
 }
 
