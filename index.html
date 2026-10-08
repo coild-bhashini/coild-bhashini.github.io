@@ -345,6 +345,32 @@
 
     <div class="news-track">
 
+
+
+
+
+<!-- CARD 3 -->
+        <div class="news-card">
+
+            <div class="news-label">
+                A new research paper from the COIL-D initiative.
+            </div>
+
+            <h3>
+        COILD: An Indic-Centric Parallel Corpus and Benchmark for Machine Translation Across Indian Languages
+    </h3>
+
+   
+    <a href="https://arxiv.org/abs/2609.28826"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="news-link">
+
+       Read Paper →
+    </a>
+  </div>
+
+
         <!-- CARD 1 -->
         <div class="news-card">
 
@@ -356,7 +382,7 @@
                 Currently we hiring for different positions.
             </h3>
 
-          <p>We are hiring for JRA (Technical & Language), Liaison Officer and Office Assistant positions under the COIL-D initiative at IIT Patna.</p>
+          <p>We are hiring for JRA (Language ODIA) under the COIL-D initiative at IIT Patna.</p>
 
             <a href="https://coild-bhashini.github.io/#career"
                target="_blank"
@@ -2383,7 +2409,351 @@ the inferencing using selected model.</li></ul></p> -->
 
     </section> --><!-- /Faq Section -->
 
-    <section id="publication" style="min-height: 5px;"></section>
+    
+<!-- ================= PUBLICATION SECTION ================= -->
+
+<style>
+
+/* ===== PUBLICATION SECTION ===== */
+
+#publication {
+  background: #f7f9fc;
+  padding: 70px 0;
+  font-family: "Roboto", sans-serif;
+}
+
+#publication .publication-container {
+  width: 92%;
+  max-width: 1350px;
+  margin: auto;
+}
+
+/* Section Heading */
+#publication .publication-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+#publication .publication-title h2 {
+  font-size: 30px;
+  color: #16344f;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+#publication .publication-title p {
+  max-width: 1050px;
+  margin: auto;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4f5b66;
+}
+
+/* Publication Card */
+#publication .publication-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px 35px;
+  margin-bottom: 25px;
+
+  border: 1px solid #e6eaf0;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.06),
+    0 10px 30px rgba(0, 0, 0, 0.05);
+
+  transition: all 0.3s ease;
+}
+
+#publication .publication-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.08),
+    0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Publication Type */
+#publication .publication-type {
+  display: inline-block;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  color: #ffffff;
+  background: #16344f;
+
+  padding: 6px 12px;
+  border-radius: 20px;
+
+  margin-bottom: 15px;
+
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Paper Title */
+#publication .publication-card h3 {
+  font-size: 22px;
+  line-height: 1.45;
+
+  color: #16344f;
+
+  font-weight: 700;
+
+  margin-bottom: 14px;
+}
+
+/* Authors */
+#publication .publication-authors {
+  font-size: 15px;
+  line-height: 1.7;
+
+  color: #4f5b66;
+
+  margin-bottom: 10px;
+}
+
+/* Publication Information */
+#publication .publication-info {
+  font-size: 14px;
+  color: #68737d;
+
+  margin-bottom: 20px;
+}
+
+#publication .publication-info strong {
+  color: #16344f;
+}
+
+/* Buttons */
+#publication .publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#publication .publication-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 9px 16px;
+
+  border-radius: 6px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #ffffff;
+  background: #16344f;
+
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+#publication .publication-button:hover {
+  background: #ffc107;
+  color: #16344f;
+}
+
+#publication .publication-button.bibtex-button {
+  background: #ffc107;
+  color: #16344f;
+}
+
+#publication .publication-button.bibtex-button:hover {
+  background: #16344f;
+  color: #ffffff;
+}
+
+/* BibTeX Box */
+#publication .bibtex-box {
+  display: none;
+
+  margin-top: 18px;
+  padding: 20px;
+
+  background: #f7f9fc;
+
+  border-left: 4px solid #ffc107;
+
+  border-radius: 8px;
+
+  overflow-x: auto;
+}
+
+#publication .bibtex-box pre {
+  margin: 0;
+
+  font-family: "Roboto Mono", monospace;
+
+  font-size: 13px;
+  line-height: 1.6;
+
+  color: #263238;
+
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Show BibTeX when checkbox is checked */
+#publication .bibtex-toggle {
+  display: none;
+}
+
+#publication .bibtex-toggle:checked + .bibtex-box {
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  #publication {
+    padding: 55px 0;
+  }
+
+  #publication .publication-container {
+    width: 90%;
+  }
+
+  #publication .publication-title h2 {
+    font-size: 26px;
+  }
+
+  #publication .publication-card {
+    padding: 24px 20px;
+  }
+
+  #publication .publication-card h3 {
+    font-size: 19px;
+  }
+
+  #publication .publication-authors {
+    font-size: 14px;
+  }
+
+  #publication .publication-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #publication .publication-button {
+    width: auto;
+  }
+
+}
+
+</style>
+
+
+<section id="publication">
+
+  <div class="publication-container">
+
+    <!-- Section Title -->
+    <div class="publication-title">
+      <h2>Publications</h2>
+      <p>
+        Selected research publications and resources from the COIL-D initiative.
+      </p>
+    </div>
+
+
+    <!-- ================= PUBLICATION 1 ================= -->
+
+    <div class="publication-card">
+
+      <div class="publication-type">
+        arXiv • 2026
+      </div>
+
+      <h3>
+        COILD: An Indic-Centric Parallel Corpus and Benchmark for Machine Translation Across Indian Languages
+      </h3>
+
+      <p class="publication-authors">
+        <strong>Authors:</strong>
+        Kshetrimayum Boynao Singh, Nitin Kumar Mishra, Palash Pratim Dutta,
+        Atai Waris Khan, Aparna Kaushik, Avinash Kumar, Deeksha,
+        Deepak Kumar, Saroj Kumar Jha, Saloka Sengupta, Anansa Roy,
+        Umalatha Kannoth, Saifulla Samar, Meena Sharma, Manpreet Kaur,
+        Jyoti Sharma, Ashwini Vaidya, Muralikrishna SN, Md Shad Akhtar,
+        Poonam Bansal, Amita Dev, Sanasam Ranbir Singh,
+        Samit Bhattacharya, Tanmoy Chakraborty, and Asif Ekbal.
+      </p>
+
+      <p class="publication-info">
+        <strong>Year:</strong> 2026
+        &nbsp; | &nbsp;
+        <strong>arXiv:</strong> 2609.28826
+        &nbsp; | &nbsp;
+        <strong>Category:</strong> cs.CL
+      </p>
+
+
+      <!-- Links -->
+      <div class="publication-links">
+
+        <a
+          href="https://arxiv.org/abs/2609.28826"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="publication-button">
+
+          <i class="bi bi-file-earmark-text"></i>
+          Paper
+        </a>
+
+
+        <!-- BibTeX Toggle -->
+        <label
+          for="bibtex-coild-2026"
+          class="publication-button bibtex-button"
+          style="cursor: pointer;">
+
+          <i class="bi bi-code-square"></i>
+          BibTeX
+
+        </label>
+
+      </div>
+
+
+      <!-- BibTeX -->
+      <input
+        type="checkbox"
+        id="bibtex-coild-2026"
+        class="bibtex-toggle"
+      >
+
+      <div class="bibtex-box">
+
+<pre>@misc{singh2026coildindiccentricparallelcorpus,
+  title={COILD: An Indic-Centric Parallel Corpus and Benchmark for Machine Translation Across Indian Languages},
+  author={Kshetrimayum Boynao Singh and Nitin Kumar Mishra and Palash Pratim Dutta and Atai Waris Khan and Aparna Kaushik and Avinash Kumar and Deeksha and Deepak Kumar and Saroj Kumar Jha and Saloka Sengupta and Anansa Roy and Umalatha Kannoth and Saifulla Samar and Meena Sharma and Manpreet Kaur and Jyoti Sharma and Ashwini Vaidya and Muralikrishna SN and Md Shad Akhtar and Poonam Bansal and Amita Dev and Sanasam Ranbir Singh and Samit Bhattacharya and Tanmoy Chakraborty and Asif Ekbal},
+  year={2026},
+  eprint={2609.28826},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2609.28826}
+}</pre>
+
+      </div>
+
+    </div>
+
+    <!-- ================= END PUBLICATION 1 ================= -->
+
+
+  </div>
+
+</section>
+
+<!-- ================= END PUBLICATION SECTION ================= -->
+
 
 
 <style>
