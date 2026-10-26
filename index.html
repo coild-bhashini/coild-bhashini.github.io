@@ -44,7 +44,46 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var dropdowns = document.querySelectorAll('.nav-dropdown');
 
+  dropdowns.forEach(function (dd) {
+    var toggle = dd.querySelector('.nav-dropdown-toggle');
+
+    // Open/close on click
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var isOpen = dd.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close after choosing a submenu item
+    dd.querySelectorAll('.nav-submenu a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        dd.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  });
+
+  // Close when clicking anywhere else
+  document.addEventListener('click', function () {
+    dropdowns.forEach(function (dd) {
+      dd.classList.remove('open');
+      dd.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Close with the Escape key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      dropdowns.forEach(function (dd) { dd.classList.remove('open'); });
+    }
+  });
+});
+</script>
 <body class="index-page">
 
   <style>
@@ -68,7 +107,48 @@
 }
 
   </style>
+  <style>
 
+  /* ===== NAV DROPDOWN (click to open) ===== */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown > .nav-submenu {
+  display: none !important;
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  min-width: 220px;
+  margin: 0 !important;
+  padding: 8px 0 !important;
+  list-style: none;
+  flex-direction: column;
+  background: #1f3447; /* match your navbar colour */
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.nav-dropdown.open > .nav-submenu {
+  display: block !important;
+}
+
+.nav-dropdown > .nav-submenu li {
+  display: block !important;
+  margin: 0 !important;
+}
+
+.nav-dropdown > .nav-submenu li a {
+  display: block;
+  padding: 10px 18px;
+  white-space: nowrap;
+}
+
+.nav-dropdown > .nav-submenu li a:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+</style>
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
@@ -92,6 +172,13 @@
           <li><a href="#ldboard">Leader Board</a></li>
           <li><a href="#team">Consortium Members</a></li>
           <li><a href="#collaborators">Collaborators</a></li>
+          <li class="nav-dropdown">
+  <a href="#" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Engagement &#9662;</a>
+  <ul class="nav-submenu">
+    <li><a href="#stakeholder-engagement">Stakeholder Engagement</a></li>
+  </ul>
+</li>
+
           <li><a href="#publication">Publications</a></li>
           <li><a href="#career">Career</a></li>
           <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -2265,7 +2352,468 @@ the inferencing using selected model.</li></ul></p> -->
 
 
 
+<style>
+/* ===== STAKEHOLDER ENGAGEMENT (same look as Publications) ===== */
 
+#stakeholder-engagement {
+  background: #f7f9fc;
+  padding: 70px 0;
+  font-family: "Roboto", sans-serif;
+  scroll-margin-top: 80px;
+}
+
+#stakeholder-engagement .se-container {
+  width: 92%;
+  max-width: 1350px;
+  margin: auto;
+}
+
+/* Section Heading */
+#stakeholder-engagement .se-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+#stakeholder-engagement .se-title h2 {
+  font-size: 30px;
+  color: #16344f;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+#stakeholder-engagement .se-title p {
+  max-width: 1050px;
+  margin: auto;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4f5b66;
+}
+
+/* Card */
+#stakeholder-engagement .se-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px 35px;
+  margin-bottom: 25px;
+  border: 1px solid #e6eaf0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06), 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+#stakeholder-engagement .se-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08), 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Type pill */
+#stakeholder-engagement .se-type {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  background: #16344f;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+#stakeholder-engagement .se-type.closed { background: #b3261e; }
+
+#stakeholder-engagement .se-card h3 {
+  font-size: 22px;
+  line-height: 1.45;
+  color: #16344f;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+#stakeholder-engagement .se-card h4 {
+  font-size: 18px;
+  color: #16344f;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+#stakeholder-engagement .se-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4f5b66;
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+/* Buttons (same as publication buttons) */
+#stakeholder-engagement .se-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+#stakeholder-engagement .se-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #16344f;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+#stakeholder-engagement .se-button:hover {
+  background: #ffc107;
+  color: #16344f;
+}
+#stakeholder-engagement .se-button.gold {
+  background: #ffc107;
+  color: #16344f;
+}
+#stakeholder-engagement .se-button.gold:hover {
+  background: #16344f;
+  color: #ffffff;
+}
+
+/* Highlight the button whose box is open */
+#stakeholder-engagement .se-card:has(#se-scope:checked) label[for="se-scope"],
+#stakeholder-engagement .se-card:has(#se-lang:checked) label[for="se-lang"],
+#stakeholder-engagement .se-card:has(#se-domain:checked) label[for="se-domain"] {
+  background: #16344f;
+  color: #ffffff;
+}
+
+/* Toggle boxes (radio buttons: only one open at a time) */
+#stakeholder-engagement .se-toggle { display: none; }
+
+#stakeholder-engagement .se-box {
+  display: none;
+  margin-top: 18px;
+  padding: 20px;
+  background: #f7f9fc;
+  border-left: 4px solid #ffc107;
+  border-radius: 8px;
+}
+#stakeholder-engagement .se-toggle:checked + .se-box { display: block; }
+
+#stakeholder-engagement .se-box h5 {
+  font-size: 16px;
+  color: #16344f;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+#stakeholder-engagement .se-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#stakeholder-engagement .se-box li {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #263238;
+  padding: 6px 0 6px 28px;
+  position: relative;
+}
+#stakeholder-engagement .se-box li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffc107;
+  color: #16344f;
+  font-size: 11px;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+#stakeholder-engagement .se-box p {
+  margin: 12px 0 0;
+  font-size: 14px;
+  color: #4f5b66;
+}
+
+/* Tags inside toggle boxes */
+#stakeholder-engagement .se-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+#stakeholder-engagement .se-tags span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #16344f;
+  background: #ffffff;
+  border: 1px solid #e6eaf0;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+/* Info (details) */
+#stakeholder-engagement .se-info {
+  font-size: 14px;
+  color: #68737d;
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+#stakeholder-engagement .se-info strong { color: #16344f; }
+#stakeholder-engagement .se-info a { color: #0d4d71; font-weight: 500; }
+#stakeholder-engagement .se-deadline { color: #b3261e; font-weight: 700; }
+
+#stakeholder-engagement .se-copy {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: #16344f;
+  background: #ffffff;
+  border: 1px solid #16344f;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#stakeholder-engagement .se-copy:hover {
+  background: #ffc107;
+  border-color: #ffc107;
+}
+
+#stakeholder-engagement .se-note {
+  font-size: 13px;
+  color: #68737d;
+  margin-top: 6px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  #stakeholder-engagement { padding: 55px 0; }
+  #stakeholder-engagement .se-container { width: 90%; }
+  #stakeholder-engagement .se-title h2 { font-size: 26px; }
+  #stakeholder-engagement .se-card { padding: 24px 20px; }
+  #stakeholder-engagement .se-card h3 { font-size: 19px; }
+  #stakeholder-engagement .se-links { flex-direction: column; align-items: flex-start; }
+}
+</style>
+
+
+<!-- ===== Engagement Section Start ===== -->
+<section id="stakeholder-engagement">
+
+  <div class="se-container">
+
+    <!-- Section Title -->
+    <div class="se-title">
+      <h2>Stakeholder Engagement</h2>
+      <p>Expression of Interest for language data creation under the COIL-D initiative.</p>
+    </div>
+
+
+    <!-- ================= EOI CARD ================= -->
+    <div class="se-card">
+
+      
+
+      <h3>
+        Inviting Startups, Technology Firms, and Language Data Service Providers!
+      </h3>
+
+      <p class="se-text">
+        The Indian Institute of Technology Patna (IIT Patna) invites Expressions of Interest (EOI)
+        from eligible startups, technology firms, and specialized service providers for language data
+        creation under COIL-D: Centre of Indian Language Data, a project under the flagship BHASHINI
+        Mission, Ministry of Electronics and Information Technology (MeitY), Government of India.
+      </p>
+
+      <p class="se-text">
+        The initiative aims to develop large-scale, high-quality multilingual datasets to advance
+        Artificial Intelligence (AI), Natural Language Processing (NLP), and Speech Technologies for
+        Indian languages.
+      </p>
+
+
+      <!-- Links -->
+      <div class="se-links">
+
+        
+
+        <!-- Toggle: Scope of Work -->
+        <label for="se-scope" class="se-button gold">
+          <i class="bi bi-list-check"></i>
+          Scope of Work
+        </label>
+
+        <!-- Toggle: Target Languages -->
+        <label for="se-lang" class="se-button gold">
+          <i class="bi bi-translate"></i>
+          Target Languages
+        </label>
+
+        <!-- Toggle: Target Domains -->
+        <label for="se-domain" class="se-button gold">
+          <i class="bi bi-grid"></i>
+          Target Domains
+        </label>
+
+        <a href="forms/COILDEOI.pdf"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="se-button">
+          <i class="bi bi-file-earmark-pdf"></i>
+          More Details (PDF)
+        </a>
+
+      </div>
+
+
+      <!-- Scope of Work -->
+      <input type="radio" name="se-group" id="se-scope" class="se-toggle">
+      <div class="se-box">
+        <h5>Scope of Work</h5>
+        <p style="margin:0 0 12px;">Interested organizations may apply for one or more of the following workstreams:</p>
+        <ul>
+          <li>Source Data Collection &amp; Validation</li>
+          <li>Parallel Corpora Creation &amp; Validation</li>
+          <li>Automatic Speech Recognition (ASR) Data Creation</li>
+          <li>Text-to-Speech (TTS) Data Creation</li>
+          <li>Speech-to-Speech Translation (S2ST) Data Creation</li>
+          <li>Sentiment Analysis Data Collection &amp; Annotation</li>
+          <li>Quality Assurance &amp; Validation</li>
+        </ul>
+      </div>
+
+      <!-- Target Languages -->
+      <input type="radio" name="se-group" id="se-lang" class="se-toggle">
+      <div class="se-box">
+        <h5>Target Languages</h5>
+        <div class="se-tags">
+          <span>Hindi</span>
+          <span>Maithili</span>
+          <span>Santali</span>
+          <span>Odia</span>
+          <span>Bengali</span>
+        </div>
+        <p>and other Indian languages, including low-resource and tribal languages.</p>
+      </div>
+
+      <!-- Target Domains -->
+      <input type="radio" name="se-group" id="se-domain" class="se-toggle">
+      <div class="se-box">
+        <h5>Target Domains</h5>
+        <div class="se-tags">
+          <span>Education</span>
+          <span>Judiciary</span>
+          <span>Healthcare</span>
+          <span>Science &amp; Technology</span>
+          <span>Tourism</span>
+          <span>Climate &amp; Environment</span>
+          <span>Governance</span>
+          <span>Agriculture</span>
+        </div>
+        <p>and more.</p>
+      </div>
+
+    </div>
+    <!-- ================= END EOI CARD ================= -->
+
+
+    <!-- ================= WHO CAN APPLY ================= -->
+    <div class="se-card">
+      <h4>Who Can Apply?</h4>
+      <p class="se-text" style="margin-bottom:0;">
+        Registered Indian startups, technology firms, MSMEs, and specialized service providers with
+        relevant experience in language technologies, data collection, annotation, transcription,
+        translation, or speech processing.
+      </p>
+    </div>
+
+
+    <!-- ================= IMPORTANT DETAILS ================= -->
+    <div class="se-card">
+
+      <h4>Important Details</h4>
+
+      <p class="se-info">
+        <strong>EOI Issue Date:</strong> 24 October 2026
+        &nbsp; | &nbsp;
+        <strong>Last Date for Submission:</strong>
+        <span class="se-deadline">8 November 2026</span>
+      </p>
+
+      <p class="se-info">
+        <strong>Submission Email:</strong>
+        <a href="mailto:coild.bhashini@gmail.com">coild.bhashini@gmail.com</a>
+        <!-- <button class="se-copy" type="button" data-copy="coild.bhashini@gmail.com">Copy</button> -->
+      </p>
+
+      <p class="se-info">
+        <strong>Email Subject:</strong>
+        EOI Response — COIL-D Data Services — [Workstream Name] — [Company Name]
+        <!-- <button class="se-copy" type="button" data-copy="EOI Response — COIL-D Data Services — [Workstream Name] — [Company Name]">Copy</button> -->
+      </p>
+
+      <div class="se-links">
+        <a class="se-button"
+           href="mailto:coild.bhashini@gmail.com?subject=EOI%20Response%20%E2%80%94%20COIL-D%20Data%20Services%20%E2%80%94%20%5BWorkstream%20Name%5D%20%E2%80%94%20%5BCompany%20Name%5D">
+          <i class="bi bi-envelope"></i>
+          Submit by Email
+        </a>
+
+        
+      </div>
+
+      <!-- <p class="se-note">This EOI is for empanelment only and does not guarantee a work order.</p> -->
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ===== Engagement Section End ===== -->
+
+<script>
+(function () {
+  var root = document.getElementById('stakeholder-engagement');
+  if (!root) return;
+
+  /* Open / Closed badge (deadline: 8 Nov 2026, 11:59 PM IST) */
+  var badge = root.querySelector('#seStatus');
+  if (Date.now() > new Date('2026-11-08T23:59:59+05:30').getTime()) {
+    badge.innerHTML = 'EOI &bull; Closed';
+    badge.classList.add('closed');
+  }
+
+  /* Copy buttons */
+  root.querySelectorAll('.se-copy').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var text = b.getAttribute('data-copy');
+      var done = function () {
+        var old = b.textContent;
+        b.textContent = 'Copied!';
+        setTimeout(function () { b.textContent = old; }, 1500);
+      };
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(done);
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        document.execCommand('copy'); document.body.removeChild(ta); done();
+      }
+    });
+  });
+
+  /* Click the same button again to close its box */
+  root.querySelectorAll('label.se-button[for]').forEach(function (label) {
+    label.addEventListener('click', function (e) {
+      var radio = root.querySelector('#' + label.getAttribute('for'));
+      if (radio && radio.checked) {
+        e.preventDefault();
+        radio.checked = false;
+      }
+    });
+  });
+})();
+</script>
 
 
 
@@ -2408,6 +2956,10 @@ the inferencing using selected model.</li></ul></p> -->
       <!-- </div>
 
     </section> --><!-- /Faq Section -->
+
+
+
+
 
     
 <!-- ================= PUBLICATION SECTION ================= -->
